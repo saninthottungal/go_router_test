@@ -18,32 +18,52 @@ class MyRoutes {
         ),
       ),
       GoRoute(
-        path: '/headset',
+        path: '/headset/:title',
         name: RouteConstants.headset,
-        pageBuilder: (context, state) => const MaterialPage(
-          child: ScreenHeadset(),
-        ),
+        pageBuilder: (context, state) {
+          final title = state.pathParameters['title'];
+          return MaterialPage(
+            child: ScreenHeadset(
+              title: title,
+            ),
+          );
+        },
       ),
       GoRoute(
-        path: '/speaker',
+        path: '/speaker/:title',
         name: RouteConstants.speaker,
-        pageBuilder: (context, state) => const MaterialPage(
-          child: ScreenSpeaker(),
-        ),
+        pageBuilder: (context, state) {
+          final title = state.pathParameters['title'];
+          return MaterialPage(
+            child: ScreenSpeaker(
+              title: title,
+            ),
+          );
+        },
       ),
       GoRoute(
-        path: '/watch',
+        path: '/watch/:title',
         name: RouteConstants.watch,
-        pageBuilder: (context, state) => const MaterialPage(
-          child: ScreenWatch(),
-        ),
+        pageBuilder: (context, state) {
+          final title = state.pathParameters['title'];
+          return MaterialPage(
+            child: ScreenWatch(
+              title: title,
+            ),
+          );
+        },
       ),
       GoRoute(
-        path: '/mobile',
+        path: '/mobile/:title',
         name: RouteConstants.mobile,
-        pageBuilder: (context, state) => const MaterialPage(
-          child: ScreenMobile(),
-        ),
+        pageBuilder: (context, state) {
+          final title = state.pathParameters['title'];
+          return MaterialPage(
+            child: ScreenMobile(
+              title: title,
+            ),
+          );
+        },
       ),
       GoRoute(
         path: '/additem',

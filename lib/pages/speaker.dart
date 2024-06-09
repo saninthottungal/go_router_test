@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
 class ScreenSpeaker extends StatelessWidget {
-  const ScreenSpeaker({super.key});
+  const ScreenSpeaker({super.key, this.title});
+  final String? title;
 
   @override
   Widget build(BuildContext context) {

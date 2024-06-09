@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
 class ScreenWatch extends StatelessWidget {
-  const ScreenWatch({super.key});
+  const ScreenWatch({super.key, this.title});
+  final String? title;
 
   @override
   Widget build(BuildContext context) {

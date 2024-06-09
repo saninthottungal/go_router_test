@@ -15,19 +15,39 @@ class ScreenHome extends StatelessWidget {
       body: Column(
         children: [
           TextButton(
-            onPressed: () {},
+            onPressed: () {
+              context.goNamed(
+                RouteConstants.mobile,
+                pathParameters: {'title': 'mobiles'},
+              );
+            },
             child: const Text("mobiles"),
           ),
           TextButton(
-            onPressed: () {},
+            onPressed: () {
+              context.goNamed(
+                RouteConstants.speaker,
+                pathParameters: {'title': 'speakers'},
+              );
+            },
             child: const Text("speakers"),
           ),
           TextButton(
-            onPressed: () {},
+            onPressed: () {
+              context.goNamed(
+                RouteConstants.watch,
+                pathParameters: {'title': 'watches'},
+              );
+            },
             child: const Text("watches"),
           ),
           TextButton(
-            onPressed: () {},
+            onPressed: () {
+              context.goNamed(
+                RouteConstants.headset,
+                pathParameters: {'title': 'headsets'},
+              );
+            },
             child: const Text("headsets"),
           ),
         ],
@@ -35,7 +55,7 @@ class ScreenHome extends StatelessWidget {
       floatingActionButton: FloatingActionButton.extended(
         label: const Text("Add Item"),
         onPressed: () {
-          context.goNamed(RouteConstants.addItem);
+          context.pushNamed(RouteConstants.addItem);
         },
       ),
     );

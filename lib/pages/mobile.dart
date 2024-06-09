@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
 class ScreenMobile extends StatelessWidget {
-  const ScreenMobile({super.key});
+  const ScreenMobile({super.key, this.title});
+  final String? title;
 
   @override
   Widget build(BuildContext context) {
