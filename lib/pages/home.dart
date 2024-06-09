@@ -19,18 +19,22 @@ class ScreenHome extends StatelessWidget {
           CustomItemWidget(
             itemType: ShopItems.mobile,
             title: 'mobiles',
+            route: RouteConstants.mobile,
           ),
           CustomItemWidget(
             itemType: ShopItems.speaker,
             title: 'speakers',
+            route: RouteConstants.speaker,
           ),
           CustomItemWidget(
             itemType: ShopItems.watch,
             title: 'Watches',
+            route: RouteConstants.watch,
           ),
           CustomItemWidget(
             itemType: ShopItems.headset,
             title: 'Headsets',
+            route: RouteConstants.headset,
           ),
         ],
       ),

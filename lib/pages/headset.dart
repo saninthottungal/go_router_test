@@ -25,7 +25,7 @@ class ScreenHeadset extends ConsumerWidget {
               itemBuilder: (context, index) {
                 return ListTile(
                   leading: CircleAvatar(
-                    child: Text(index.toString()),
+                    child: Text((index + 1).toString()),
                   ),
                   title: Text(headsets.elementAt(index).title),
                 );

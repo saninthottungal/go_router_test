@@ -3,16 +3,17 @@ import 'package:go_router/go_router.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:product_manager/pages/add_item.dart';
 import 'package:product_manager/providers/item_provider.dart';
-import 'package:product_manager/routes/routes.dart';
 
 class CustomItemWidget extends ConsumerWidget {
   const CustomItemWidget({
     super.key,
     required this.itemType,
     required this.title,
+    required this.route,
   });
   final String title;
   final ShopItems itemType;
+  final String route;
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -22,7 +23,7 @@ class CustomItemWidget extends ConsumerWidget {
         TextButton(
           onPressed: () {
             context.goNamed(
-              RouteConstants.mobile,
+              route,
               pathParameters: {'title': title},
             );
           },
