@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:product_manager/pages/add_item.dart';
 import 'package:product_manager/pages/headset.dart';
 import 'package:product_manager/pages/home.dart';
 import 'package:product_manager/pages/mobile.dart';
@@ -43,7 +44,14 @@ class MyRoutes {
         pageBuilder: (context, state) => const MaterialPage(
           child: ScreenMobile(),
         ),
-      )
+      ),
+      GoRoute(
+        path: '/additem',
+        name: RouteConstants.addItem,
+        pageBuilder: (context, state) => const MaterialPage(
+          child: ScreenAddItem(),
+        ),
+      ),
     ],
   );
 }
@@ -54,4 +62,5 @@ class RouteConstants {
   static const String speaker = 'speaker';
   static const String watch = 'watch';
   static const String mobile = 'mobile';
+  static const String addItem = 'addItem';
 }

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:product_manager/routes/routes.dart';
 
 class ScreenHome extends StatelessWidget {
   const ScreenHome({super.key});
@@ -8,10 +10,33 @@ class ScreenHome extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: const Text('Flutter Demo Home Page'),
+        title: const Text('Home'),
       ),
-      body: const Center(
-        child: Text("home"),
+      body: Column(
+        children: [
+          TextButton(
+            onPressed: () {},
+            child: const Text("mobiles"),
+          ),
+          TextButton(
+            onPressed: () {},
+            child: const Text("speakers"),
+          ),
+          TextButton(
+            onPressed: () {},
+            child: const Text("watches"),
+          ),
+          TextButton(
+            onPressed: () {},
+            child: const Text("headsets"),
+          ),
+        ],
+      ),
+      floatingActionButton: FloatingActionButton.extended(
+        label: const Text("Add Item"),
+        onPressed: () {
+          context.goNamed(RouteConstants.addItem);
+        },
       ),
     );
   }
