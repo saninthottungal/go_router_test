@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:product_manager/pages/home.dart';
 
 void main() {
   runApp(
@@ -17,24 +18,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const MyHomePage(),
-    );
-  }
-}
-
-class MyHomePage extends StatelessWidget {
-  const MyHomePage({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: const Text('Flutter Demo Home Page'),
-      ),
-      body: const Center(
-        child: Text("data"),
-      ),
+      home: const ScreenHome(),
     );
   }
 }
